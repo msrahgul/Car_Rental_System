@@ -1,0 +1,315 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: #222;
+    font-size: 1.4em;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+}
+
+.modal-buttons button:first-child {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #d32f2f;
+}
+
+.modal-buttons button:last-child {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #c7c7c7;
+}
+
+/* Logout */
+.logout {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+.logout:hover {
+    background-color: #e63939;
+}
+
+.logout:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    background-color: #e32911;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #bb2814;
+}
+
+.tab-button.active {
+    background-color: #067e22;
+    color: white;
+}
+
+/* Cards & Grid */
+.car-grid,
+.rented-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.car-card,
+.rented-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.car-card:hover,
+.rented-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50;
+}
+
+.car-card h3,
+.rented-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.car-card p,
+.rented-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Rent Button */
+.rent-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+    background-color: #316f34;
+}
+
+.rent-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Rented Card - Clean style */
+.rented-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+ /* Subtle green border */
+}
+
+.rented-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c53030;
+}
+.rented-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.rented-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.return-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.return-button:hover {
+    background-color: #d32f2f;
+}
+
+.return-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* Empty List Notice */
+.no-cars {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Loader */
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logout {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .car-grid,
+    .rented-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-buttons button {
+        width: 100%;
+    }
+}
